@@ -14,9 +14,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <meta name="description"
           content="Financial education and peer mentoring for college students, by a college student.">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L65X2S2QPX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-L65X2S2QPX');
+    </script>
+
     <link rel="stylesheet" href="assets/css/main.css"/>
+
 </head>
-<body class="homepage is-preload" id="top">
+<body class="homepage is-preload" id="home">
 <div id="page-wrapper">
 
     <!-- Header -->
@@ -33,7 +49,7 @@
     <!-- Nav -->
     <nav id="nav">
         <ul>
-            <li class="current"><a href="#top">Home</a></li>
+            <li class="current"><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#resources">Resources</a></li>
@@ -445,7 +461,7 @@
             // Handle home section
             if (cur_pos < 300) {
                 nav.find('li').removeClass('current');
-                nav.find('a[href="#top"]').parent('li').addClass('current');
+                nav.find('a[href="#home"]').parent('li').addClass('current');
             }
         });
 
