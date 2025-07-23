@@ -128,7 +128,8 @@
 
                                     <!-- Service -->
                                     <section class="box feature">
-                                        <a href="#" class="image featured"><img src="images/student_loan_management.jpg" alt=""/></a>
+                                        <a href="#" class="image featured"><img src="images/student_loan_management.jpg"
+                                                                                alt=""/></a>
                                         <h3><a href="#">Student Loan Management</a></h3>
                                         <p>
                                             Navigate student loans confidently. Understand your options,
@@ -154,7 +155,8 @@
 
                                     <!-- Service -->
                                     <section class="box feature">
-                                        <a href="#" class="image featured"><img src="images/career_prep.jpg" alt=""/></a>
+                                        <a href="#" class="image featured"><img src="images/career_prep.jpg"
+                                                                                alt=""/></a>
                                         <h3><a href="#">Career Prep</a></h3>
                                         <p>
                                             Learn the fundamentals of workplace benefits like 401(k)s and IRAs to make
@@ -220,7 +222,8 @@
                                                 <h3><a href="#">A Personalized Approach That Works</a></h3>
                                                 <p>No judgement, no jargon - just real financial education</p>
                                             </header>
-                                            <a href="#" class="image featured"><img src="images/financial_education.jpg" alt=""/></a>
+                                            <a href="#" class="image featured"><img src="images/financial_education.jpg"
+                                                                                    alt=""/></a>
                                             <p>
                                                 I believe financial education should be accessible and relatable. That's
                                                 why every
@@ -385,47 +388,12 @@
                         <h2 class="major"><span>Get in touch!</span></h2>
                         <p>Ready to take control of your financial future? Reach out for a free consultation!</p>
 
-                        <!-- ADD FORM HANDLING!!!!!! -->
-                        <form method="post" action="https://formspree.io/f/mrblporj" id="contact-form">
-                            <div class="row gtr-uniform">
-                                <div class="col-6 col-12-xsmall">
-                                    <input type="text" name="name" id="name" placeholder="Name" required/>
-                                </div>
-                                <div class="col-6 col-12-xsmall">
-                                    <input type="email" name="email" id="email" placeholder="Email" required/>
-                                </div>
-                                <div class="col-12">
-                                    <select name="year" id="year">
-                                        <option value="">- Year in School -</option>
-                                        <option value="freshman">Freshman</option>
-                                        <option value="sophomore">Sophomore</option>
-                                        <option value="junior">Junior</option>
-                                        <option value="senior">Senior</option>
-                                        <option value="graduate">Graduate Student</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <input type="text" name="school" id="school" placeholder="School/University"/>
-                                </div>
-                                <div class="col-12">
-                                    <textarea name="message" id="message"
-                                              placeholder="What financial topics would you like to learn about?"
-                                              rows="6"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <ul class="actions">
-                                        <li><input type="submit" value="Request Free Session" class="primary"/></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </form>
-
-                        <!-- Keep your existing contact links below the form -->
                         <ul class="contact">
                             <li><a class="icon solid fa-envelope" href="mailto:contact@summitcorefinancial.com"><span
                                     class="label">Email</span></a></li>
-                            <li><a class="icon brands fa-linkedin-in" href="https://www.linkedin.com/in/yoonmilling/"><span class="label">LinkedIn</span></a>
-                            </li>
+                            <li><a class="icon brands fa-linkedin-in"
+                                   href="https://www.linkedin.com/in/yoonmilling/"><span
+                                    class="label">LinkedIn</span></a></li>
                         </ul>
                     </section>
 
@@ -455,38 +423,38 @@
 <script src="assets/js/main.js"></script>
 
 <script>
-$(document).ready(function() {
-    // Get all sections with an ID
-    var sections = $('section[id]');
-    var nav = $('#nav');
-    var nav_height = nav.outerHeight();
+    $(document).ready(function () {
+        // Get all sections with an ID
+        var sections = $('section[id]');
+        var nav = $('#nav');
+        var nav_height = nav.outerHeight();
 
-    $(window).on('scroll', function() {
-        var cur_pos = $(this).scrollTop();
+        $(window).on('scroll', function () {
+            var cur_pos = $(this).scrollTop();
 
-        sections.each(function() {
-            var top = $(this).offset().top - nav_height - 100;
-            var bottom = top + $(this).outerHeight();
+            sections.each(function () {
+                var top = $(this).offset().top - nav_height - 100;
+                var bottom = top + $(this).outerHeight();
 
-            if (cur_pos >= top && cur_pos <= bottom) {
+                if (cur_pos >= top && cur_pos <= bottom) {
+                    nav.find('li').removeClass('current');
+                    nav.find('a[href="#' + $(this).attr('id') + '"]').parent('li').addClass('current');
+                }
+            });
+
+            // Handle home section
+            if (cur_pos < 300) {
                 nav.find('li').removeClass('current');
-                nav.find('a[href="#' + $(this).attr('id') + '"]').parent('li').addClass('current');
+                nav.find('a[href="#top"]').parent('li').addClass('current');
             }
         });
 
-        // Handle home section
-        if (cur_pos < 300) {
+        // Handle click events
+        nav.find('a').on('click', function () {
             nav.find('li').removeClass('current');
-            nav.find('a[href="#top"]').parent('li').addClass('current');
-        }
+            $(this).parent('li').addClass('current');
+        });
     });
-
-    // Handle click events
-    nav.find('a').on('click', function() {
-        nav.find('li').removeClass('current');
-        $(this).parent('li').addClass('current');
-    });
-});
 </script>
 
 </body>
