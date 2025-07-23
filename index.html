@@ -16,7 +16,7 @@
           content="Financial education and peer mentoring for college students, by a college student.">
     <link rel="stylesheet" href="assets/css/main.css"/>
 </head>
-<body class="homepage is-preload">
+<body class="homepage is-preload" id="top">
 <div id="page-wrapper">
 
     <!-- Header -->
@@ -31,11 +31,14 @@
 
     <!-- Nav -->
     <nav id="nav">
-        <li class="current"><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="resources.html">Free Resources</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <ul>
+            <li class="current"><a href="#top">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
     <!-- Banner -->
@@ -69,13 +72,31 @@
                             <p>Building your financial foundation, one step at a time</p>
                         </header>
                         <p>
-                            Hello! I'm a rising senior double majoring in Economics and Computer Science with a Math
+                            Hello! I'm Yoon, a rising senior double majoring in Economics and Computer Science with a
+                            Math
                             minor at Penn State.
                             I know firsthand how overwhelming finances can feel while allocating time for difficult
                             classes, internships,
                             and (potentially) a social life. That's why I created Summit Core Financial - to help fellow
                             undergrads
                             develop smart money habits that will last a lifetime, no matter what school you attend.
+                        </p>
+                        <h3>Why Learn From a Peer?</h3>
+                        <p>
+                            I get it - I'm living it too. From stretching dining dollars to deciding whether that unpaid
+                            internship is worth it,
+                            I understand the real financial decisions college students face. I've spent the last two
+                            years diving deep into
+                            personal finance, not just through my economics courses but through books, certifications,
+                            and real-world practice.
+                            Now I want to share what I've learned in a way that actually makes sense for our generation.
+                        </p>
+                        <h3>My Promise</h3>
+                        <p>
+                            No confusing jargon. No judgment about your current situation. No pushing products you don't
+                            need.
+                            Just practical, actionable education from someone who understands exactly where you're
+                            coming from.
                         </p>
                     </section>
 
@@ -94,8 +115,10 @@
                                         <a href="#" class="image featured"><img src="images/pic01.jpg" alt=""/></a>
                                         <h3><a href="#">Smart Budgeting</a></h3>
                                         <p>
-                                            Create a realistic budget that works with your student lifestyle.
-                                            Learn to track expenses, save money, and still enjoy college.
+                                            Learn how to create a realistic budget that works with your student
+                                            lifestyle.
+                                            I'll teach you tracking methods, money-saving strategies, and how to balance
+                                            saving with actually enjoying college.
                                         </p>
                                     </section>
 
@@ -149,6 +172,36 @@
                         </div>
                     </section>
 
+                </div>
+                <div class="col-12">
+                    <section class="box features" id="resources">
+                        <h2 class="major"><span>Free Resources to Get Started</span></h2>
+                        <div>
+                            <div class="row">
+                                <div class="col-4 col-12-medium">
+                                    <section class="box">
+                                        <h3>Budget Templates</h3>
+                                        <p>Simple spreadsheets designed for college students. Track expenses, manage
+                                            your money, and still have fun.</p>
+                                        <a href="#" class="button alt">Download Templates</a>
+                                    </section>
+                                </div>
+                                <div class="col-4 col-12-medium">
+                                    <section class="box">
+                                        <h3>Recommended Tools</h3>
+                                        <p>My favorite (mostly free) apps and resources for managing money in
+                                            college.</p>
+                                        <ul style="text-align: left;">
+                                            <li>Mint (free budgeting)</li>
+                                            <li>YNAB (free for students!)</li>
+                                            <li>Credit Karma</li>
+                                            <li>Fidelity Youth Account</li>
+                                        </ul>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
                 <div class="col-12">
 
@@ -239,6 +292,44 @@
         </div>
     </section>
 
+    <section class="wrapper style3">
+        <div class="container" id="contact">
+            <header class="major">
+                <h2>Ready to Take Control of Your Finances?</h2>
+                <p>Start with a free 30-minute educational consultation</p>
+            </header>
+            <form method="post" action="https://formspree.io/f/YOUR_FORM_ID">
+                <div class="row gtr-uniform">
+                    <div class="col-6 col-12-xsmall">
+                        <input type="text" name="name" placeholder="Name" required/>
+                    </div>
+                    <div class="col-6 col-12-xsmall">
+                        <input type="email" name="email" placeholder="Email" required/>
+                    </div>
+                    <div class="col-6 col-12-xsmall">
+                        <input type="text" name="school" placeholder="School/University"/>
+                    </div>
+                    <div class="col-6 col-12-xsmall">
+                        <select name="year">
+                            <option value="">- Year in School -</option>
+                            <option value="freshman">Freshman</option>
+                            <option value="sophomore">Sophomore</option>
+                            <option value="junior">Junior</option>
+                            <option value="senior">Senior</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <textarea name="message" placeholder="What financial topics interest you?" rows="4"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <ul class="actions special">
+                            <li><input type="submit" value="Request Free Session" class="primary"/></li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
     <!-- Footer -->
     <footer id="footer">
         <div class="container">
@@ -289,7 +380,7 @@
                 </div>
                 <div class="col-12">
 
-                    <section id="contact">
+                    <section>
                         <h2 class="major"><span>Get in touch!</span></h2>
                         <p>Ready to take control of your financial future? Reach out for a free consultation!</p>
 
@@ -361,6 +452,41 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+
+<script>
+$(document).ready(function() {
+    // Get all sections with an ID
+    var sections = $('section[id]');
+    var nav = $('#nav');
+    var nav_height = nav.outerHeight();
+
+    $(window).on('scroll', function() {
+        var cur_pos = $(this).scrollTop();
+
+        sections.each(function() {
+            var top = $(this).offset().top - nav_height - 100;
+            var bottom = top + $(this).outerHeight();
+
+            if (cur_pos >= top && cur_pos <= bottom) {
+                nav.find('li').removeClass('current');
+                nav.find('a[href="#' + $(this).attr('id') + '"]').parent('li').addClass('current');
+            }
+        });
+
+        // Handle home section
+        if (cur_pos < 300) {
+            nav.find('li').removeClass('current');
+            nav.find('a[href="#top"]').parent('li').addClass('current');
+        }
+    });
+
+    // Handle click events
+    nav.find('a').on('click', function() {
+        nav.find('li').removeClass('current');
+        $(this).parent('li').addClass('current');
+    });
+});
+</script>
 
 </body>
 </html>
