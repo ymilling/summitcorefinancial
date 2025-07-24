@@ -34,77 +34,23 @@
     <style>
         /* Mobile fixes */
         @media screen and (max-width: 736px) {
-            /* Fix squished header logo */
+            /* Hide the entire header on mobile */
             #header {
-                position: static !important;
-                background: white;
-                padding: 1em 0;
-                margin-bottom: 0;
-                width: 100%;
-                top: auto !important;
-                transform: none !important;
+                display: none !important;
             }
 
-            #header .logo > div {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            #header .logo h1 {
-                font-size: 1em;
-                margin: 0;
-                width: 100%;
-                text-align: center;
-            }
-
-            #header .logo h1 a {
-                display: flex !important;
-                align-items: center !important;
-                justify-content: center !important;
-                flex-direction: row !important;
-                flex-wrap: nowrap !important;
-                gap: 10px !important;
-            }
-
-            #header .logo svg {
-                width: 35px;
-                height: 35px;
-                flex-shrink: 0;
-            }
-
-            #header .logo span {
-                font-size: 1.2em !important;
-                white-space: nowrap;
-            }
-
-            #header .logo p {
-                display: block !important;
-                visibility: visible !important;
-                opacity: 1 !important;
-                font-size: 0.9em !important;
-                margin: 0.5em 0 0 0 !important;
-                padding: 0 1em;
-                text-align: center;
-                width: 100%;
-            }
-
+            /* Adjust nav to be at the top since header is gone */
             #nav {
                 position: static !important;
                 top: 0 !important;
                 background: #fff;
                 box-shadow: 0 0 0.5em 0 rgba(0, 0, 0, 0.1);
+                margin-top: 0;
             }
 
-            #nav.fixed {
-                position: static !important;
-            }
-
-            /* Fix banner taking over entire screen */
+            /* Fix banner spacing since header is gone */
             #banner {
-                margin-top: 1em;
+                margin-top: 0;
                 min-height: 40vh;
                 padding: 2em 1em;
             }
@@ -116,25 +62,6 @@
             #banner h2 {
                 font-size: 1.5em;
             }
-
-            /* Additional fixes for very small screens */
-            @media screen and (max-width: 480px) {
-                #header .logo h1 a {
-                    flex-direction: column !important;
-                    gap: 5px !important;
-                }
-
-                #header .logo span {
-                    font-size: 1.1em !important;
-                }
-            }
-        }
-
-        /* Override any JavaScript-based fixed positioning */
-        body.is-mobile #header,
-        body.is-mobile #nav {
-            position: static !important;
-            transform: none !important;
         }
     </style>
 
