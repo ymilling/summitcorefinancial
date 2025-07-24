@@ -31,6 +31,40 @@
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
+    <style>
+        /* Mobile fixes */
+        @media screen and (max-width: 736px) {
+            /* Fix squished header logo */
+            #header .logo h1 {
+                font-size: 1.2em;
+            }
+
+            #header .logo svg {
+                width: 40px;
+                height: 40px;
+            }
+
+            #header .logo span {
+                font-size: 1.5em !important;
+            }
+
+            /* Fix banner taking over entire screen */
+            #banner {
+                margin-top: 80px; /* Space for header */
+                min-height: 50vh; /* Don't take full height */
+                padding: 2em 1em;
+            }
+
+            #banner .content {
+                padding: 1.5em;
+            }
+
+            #banner h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+
     <link rel="stylesheet" href="assets/css/main.css"/>
 
 </head>
@@ -41,8 +75,9 @@
     <header id="header">
         <div class="logo container">
             <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
-                <h1 style="display: flex; align-items: center; gap: 15px;">
-                    <a href="index.html" id="logo" style="text-decoration: none; display: flex; align-items: center;">
+                <h1 style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap; justify-content: center;">
+                    <a href="index.html" id="logo"
+                       style="text-decoration: none; display: flex; align-items: center; flex-wrap: wrap; justify-content: center">
                         <!-- Mini version of favicon -->
                         <svg width="50" height="50" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));">
                             <defs>
@@ -90,7 +125,7 @@
     </nav>
 
     <!-- Banner -->
-    <section id="banner" style="display: flex; align-items: center; justify-content: center;">
+    <section id="banner" style="display: flex; align-items: center; justify-content: center; margin-top: 20px;">
         <div class="content" style="text-align: center; width: 100%; margin: 0 auto;">
             <h2>Learn Money Skills That Actually Matter in College</h2>
             <p style="color: #faebd7;">Peer-to-peer financial education from someone who gets it</p>
