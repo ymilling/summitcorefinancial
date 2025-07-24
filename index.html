@@ -35,23 +35,43 @@
         /* Mobile fixes */
         @media screen and (max-width: 736px) {
             /* Fix squished header logo */
+            #header {
+                position: relative !important;
+                background: white;
+                padding: 1em 0;
+                margin-bottom: 0;
+            }
+
             #header .logo h1 {
-                font-size: 1.2em;
+                font-size: 1em;
+                margin: 0;
             }
 
             #header .logo svg {
-                width: 40px;
-                height: 40px;
+                width: 35px;
+                height: 35px;
             }
 
             #header .logo span {
-                font-size: 1.5em !important;
+                font-size: 1.2em !important;
+            }
+
+            #header .logo p {
+                display: block !important;
+                visibility: visible !important;
+                font-size: 0.9em !important;
+                margin-bottom: 0 !important;
+            }
+
+            #nav {
+                position: relative !important;
+                top: 0 !important;
             }
 
             /* Fix banner taking over entire screen */
             #banner {
-                margin-top: 80px; /* Space for header */
-                min-height: 50vh; /* Don't take full height */
+                margin-top: 1em;
+                min-height: 40vh;
                 padding: 2em 1em;
             }
 
@@ -142,7 +162,7 @@
 
                     <!-- Highlight -->
                     <section class="box highlight" id="about" style="padding-top: 1em;">
-                        <ul class="special">\
+                        <ul class="special">
                             <li><a class="icon solid fa-chart-line"><span class="label">Growth</span></a></li>
                             <li><a class="icon solid fa-piggy-bank"><span class="label">Savings</span></a></li>
                             <li><a class="icon solid fa-graduation-cap"><span class="label">Education</span></a>
