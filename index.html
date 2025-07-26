@@ -531,6 +531,15 @@
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
+
+<script>
+    if (window.innerWidth <= 736) {
+        $(document).ready(function() {
+            $('<a id="logo" style="display:none">SCF</a>').appendTo('body');
+        });
+    }
+</script>
+
 <script src="assets/js/main.js"></script>
 
 <script>
