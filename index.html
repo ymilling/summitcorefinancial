@@ -9,104 +9,116 @@
 -->
 <html>
 <head>
-	<title>Summit Core Financial</title>
-	<meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-	<meta name="description"
-		  content="Financial education and peer mentoring for college students, by a college student.">
+    <title>Summit Core Financial</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <meta name="description"
+          content="Financial education and peer mentoring for college students, by a college student.">
 
-	<!-- Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-L65X2S2QPX"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L65X2S2QPX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-		function gtag() {
-			dataLayer.push(arguments);
-		}
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
-		gtag('js', new Date());
+        gtag('js', new Date());
 
-		gtag('config', 'G-L65X2S2QPX');
-	</script>
+        gtag('config', 'G-L65X2S2QPX');
+    </script>
 
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
-	<style>
-		/* Mobile fixes */
-		@media screen and (max-width: 736px) {
-			/* Target every possible header element with maximum specificity */
-			body #header,
-			body header#header,
-			body #page-wrapper #header,
-			body div#header,
-			body .homepage #header,
-			#header.logo,
-			#header .logo,
-			#header .logo div,
-			#header .logo h1,
-			#header .logo p,
-			#header .logo span,
-			#header .logo a,
-			#header .logo * {
-				display: none !important;
-				visibility: hidden !important;
-				height: 0 !important;
-				width: 0 !important;
-				overflow: hidden !important;
-				position: absolute !important;
-				left: -9999px !important;
-				opacity: 0 !important;
-				pointer-events: none !important;
-			}
+    <style>
+        /* Mobile fixes */
+        @media screen and (max-width: 736px) {
+            /* Target every possible header element with maximum specificity */
+            body #header,
+            body header#header,
+            body #page-wrapper #header,
+            body div#header,
+            body .homepage #header,
+            #header.logo,
+            #header .logo,
+            #header .logo div,
+            #header .logo h1,
+            #header .logo p,
+            #header .logo span,
+            #header .logo a,
+            #header .logo * {
+                display: none !important;
+                visibility: hidden !important;
+                height: 0 !important;
+                width: 0 !important;
+                overflow: hidden !important;
+                position: absolute !important;
+                left: -9999px !important;
+                opacity: 0 !important;
+                pointer-events: none !important;
+            }
 
-			/* Also hide the container */
-			.logo.container {
-				display: none !important;
-			}
+            .logo.container {
+                display: none !important;
+            }
 
-			/* Adjust nav to be at the top */
-			#nav {
-				position: static !important;
-				top: 0 !important;
-				background: #fff;
-				box-shadow: 0 0 0.5em 0 rgba(0, 0, 0, 0.1);
-				margin-top: 0;
-			}
+            #titleBar .toggle:before {
+                background: #fff !important;
+                box-shadow: 0 0.5rem 0 0 #fff, 0 1rem 0 0 #fff !important;
+            }
 
-			/* Fix banner spacing */
-			#banner {
-				margin-top: 0;
-				min-height: 40vh;
-				padding: 2em 1em;
-			}
+            #titleBar .title,
+            #titleBar .title a {
+                color: #fff !important;
+            }
 
-			#banner .content {
-				padding: 1.5em;
-			}
+            #titleBar {
+                background: linear-gradient(135deg, #1e3a5f 0%, #2b5876 100%) !important;
+            }
 
-			#banner h2 {
-				font-size: 1.5em;
-			}
-		}
-	</style>
+            #nav {
+                position: static !important;
+                top: 0 !important;
+                background: #fff;
+                box-shadow: 0 0 0.5em 0 rgba(0, 0, 0, 0.1);
+                margin-top: 0;
+            }
 
-	<link rel="stylesheet" href="assets/css/main.css"/>
+            /* Fix banner spacing */
+            #banner {
+                margin-top: 0;
+                min-height: 40vh;
+                padding: 2em 1em;
+            }
+
+            #banner .content {
+                padding: 1.5em;
+            }
+
+            #banner h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="assets/css/main.css"/>
 
 </head>
 <body class="homepage is-preload" id="home">
 <div id="page-wrapper">
 
-	<!-- Header -->
-	<header id="header">
-		<div class="logo container" id="header-content">
-			<!-- Remove header & Add conditionally thru JS -->
-		</div>
-	</header>
+    <!-- Header -->
+    <header id="header">
+        <div class="logo container" id="header-content">
+            <!-- Remove header & Add conditionally thru JS -->
+        </div>
+    </header>
 
-	<script>
-		// Only add header content on desktop
-		if (window.innerWidth > 736) {
-			document.getElementById('header-content').innerHTML = `
+    <script>
+        // Only add header content on desktop
+        if (window.innerWidth > 736) {
+            document.getElementById('header-content').innerHTML = `
 			<div style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
 				<h1 style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap; justify-content: center;">
 					<a href="index.html" id="logo"
@@ -143,381 +155,381 @@
 			">Empowering Students to Reach Their Financial Peak</p>
 			</div>
 		`;
-		}
-	</script>
+        }
+    </script>
 
-	<!-- Nav -->
-	<nav id="nav">
-		<ul>
-			<li class="current"><a href="#home">Home</a></li>
-			<li><a href="#about">About</a></li>
-			<li><a href="#services">Services</a></li>
-			<li><a href="#resources">Resources</a></li>
-			<li><a href="#process">Process</a></li>
-			<li><a href="#contact">Contact</a></li>
-		</ul>
-	</nav>
+    <!-- Nav -->
+    <nav id="nav">
+        <ul>
+            <li class="current"><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-	<!-- Banner -->
-	<section id="banner" style="display: flex; align-items: center; justify-content: center; margin-top: 20px;">
-		<div class="content" style="text-align: center; width: 100%; margin: 0 auto;">
-			<h2>Learn Money Skills That Actually Matter in College</h2>
-			<p style="color: #faebd7;">Peer-to-peer financial education from someone who gets it</p>
-			<p style="color: #faebd7;">Financial coaching designed for college students, by a college student</p>
-			<a href="#main" class="button scrolly">Discover How</a>
-		</div>
-	</section>
+    <!-- Banner -->
+    <section id="banner" style="display: flex; align-items: center; justify-content: center; margin-top: 20px;">
+        <div class="content" style="text-align: center; width: 100%; margin: 0 auto;">
+            <h2>Learn Money Skills That Actually Matter in College</h2>
+            <p style="color: #faebd7;">Peer-to-peer financial education from someone who gets it</p>
+            <p style="color: #faebd7;">Financial coaching designed for college students, by a college student</p>
+            <a href="#main" class="button scrolly">Discover How</a>
+        </div>
+    </section>
 
-	<!-- Main -->
-	<section id="main">
-		<div class="container">
-			<div class="row gtr-200">
-				<div class="col-12">
+    <!-- Main -->
+    <section id="main">
+        <div class="container">
+            <div class="row gtr-200">
+                <div class="col-12">
 
-					<!-- Highlight -->
-					<section class="box highlight" id="about" style="padding-top: 1em;">
-						<ul class="special">
-							<li><a class="icon solid fa-chart-line"><span class="label">Growth</span></a></li>
-							<li><a class="icon solid fa-piggy-bank"><span class="label">Savings</span></a></li>
-							<li><a class="icon solid fa-graduation-cap"><span class="label">Education</span></a>
-							</li>
-							<li><a class="icon solid fa-calculator"><span class="label">Planning</span></a></li>
-						</ul>
-						<header>
-							<h2>Student-to-Student Financial Guidance</h2>
-							<p>Building your financial foundation, one step at a time</p>
-						</header>
-						<p>
-							Hello! I'm Yoon, a rising senior double majoring in Economics and Computer Science with a
-							Math
-							minor at Penn State.
-							I know firsthand how overwhelming finances can feel while allocating time for difficult
-							classes, internships,
-							and (potentially) a social life. That's why I created Summit Core Financial - to help fellow
-							undergrads
-							develop smart money habits that will last a lifetime, no matter what school you attend.
-						</p>
-						<h3>Why Learn From a Peer?</h3>
-						<p>
-							I get it - I'm living it too. From stretching dining dollars to deciding whether that unpaid
-							internship is worth it,
-							I understand the real financial decisions college students face. I've spent the last two
-							years diving deep into
-							personal finance, not just through my economics courses but through books, certifications,
-							and real-world practice.
-							Now I want to share what I've learned in a way that actually makes sense for our generation.
-						</p>
-						<h3>My Promise</h3>
-						<p>
-							No confusing jargon. No judgment about your current situation. No pushing products you don't
-							need.
-							Just practical, actionable education from someone who understands exactly where you're
-							coming from.
-						</p>
-					</section>
+                    <!-- Highlight -->
+                    <section class="box highlight" id="about" style="padding-top: 1em;">
+                        <ul class="special">
+                            <li><a class="icon solid fa-chart-line"><span class="label">Growth</span></a></li>
+                            <li><a class="icon solid fa-piggy-bank"><span class="label">Savings</span></a></li>
+                            <li><a class="icon solid fa-graduation-cap"><span class="label">Education</span></a>
+                            </li>
+                            <li><a class="icon solid fa-calculator"><span class="label">Planning</span></a></li>
+                        </ul>
+                        <header>
+                            <h2>Student-to-Student Financial Guidance</h2>
+                            <p>Building your financial foundation, one step at a time</p>
+                        </header>
+                        <p>
+                            Hello! I'm Yoon, a rising senior double majoring in Economics and Computer Science with a
+                            Math
+                            minor at Penn State.
+                            I know firsthand how overwhelming finances can feel while allocating time for difficult
+                            classes, internships,
+                            and (potentially) a social life. That's why I created Summit Core Financial - to help fellow
+                            undergrads
+                            develop smart money habits that will last a lifetime, no matter what school you attend.
+                        </p>
+                        <h3>Why Learn From a Peer?</h3>
+                        <p>
+                            I get it - I'm living it too. From stretching dining dollars to deciding whether that unpaid
+                            internship is worth it,
+                            I understand the real financial decisions college students face. I've spent the last two
+                            years diving deep into
+                            personal finance, not just through my economics courses but through books, certifications,
+                            and real-world practice.
+                            Now I want to share what I've learned in a way that actually makes sense for our generation.
+                        </p>
+                        <h3>My Promise</h3>
+                        <p>
+                            No confusing jargon. No judgment about your current situation. No pushing products you don't
+                            need.
+                            Just practical, actionable education from someone who understands exactly where you're
+                            coming from.
+                        </p>
+                    </section>
 
-				</div>
-				<div class="col-12">
+                </div>
+                <div class="col-12">
 
-					<!-- Services -->
-					<section class="box features" id="services">
-						<h2 class="major"><span>What I Offer</span></h2>
-						<div>
-							<div class="row">
-								<div class="col-3 col-6-medium col-12-small">
+                    <!-- Services -->
+                    <section class="box features" id="services">
+                        <h2 class="major"><span>What I Offer</span></h2>
+                        <div>
+                            <div class="row">
+                                <div class="col-3 col-6-medium col-12-small">
 
-									<!-- Service -->
-									<section class="box feature">
-										<img src="images/budgeting.jpg" alt="Student creating a budget"
-											 class="image featured"/>
-										<h3>Smart Budgeting</h3>
-										<p>
-											Create realistic budgets that work with student life. Learn tracking methods
-											and money-saving strategies while enjoying college.
-										</p>
-									</section>
+                                    <!-- Service -->
+                                    <section class="box feature">
+                                        <img src="images/budgeting.jpg" alt="Student creating a budget"
+                                             class="image featured"/>
+                                        <h3>Smart Budgeting</h3>
+                                        <p>
+                                            Create realistic budgets that work with student life. Learn tracking methods
+                                            and money-saving strategies while enjoying college.
+                                        </p>
+                                    </section>
 
-								</div>
-								<div class="col-3 col-6-medium col-12-small">
+                                </div>
+                                <div class="col-3 col-6-medium col-12-small">
 
-									<!-- Service -->
-									<section class="box feature">
-										<img src="images/student_loan_management.jpg" alt="Student managing loans"
-											 class="image featured"/>
-										<h3>Student Loan Management</h3>
-										<p>
-											Navigate student loans confidently. Understand your options,
-											minimize debt, and create a realistic repayment strategy.
-										</p>
-									</section>
+                                    <!-- Service -->
+                                    <section class="box feature">
+                                        <img src="images/student_loan_management.jpg" alt="Student managing loans"
+                                             class="image featured"/>
+                                        <h3>Student Loan Management</h3>
+                                        <p>
+                                            Navigate student loans confidently. Understand your options,
+                                            minimize debt, and create a realistic repayment strategy.
+                                        </p>
+                                    </section>
 
-								</div>
-								<div class="col-3 col-6-medium col-12-small">
+                                </div>
+                                <div class="col-3 col-6-medium col-12-small">
 
-									<!-- Service -->
-									<section class="box feature">
-										<img src="images/investing.jpg" alt="stocks" class="image featured"/>
-										<h3>Investing 101</h3>
-										<p>
-											Start investing with as little as $10. Learn about index funds,
-											compound interest, and building long-term wealth.
-										</p>
-									</section>
+                                    <!-- Service -->
+                                    <section class="box feature">
+                                        <img src="images/investing.jpg" alt="stocks" class="image featured"/>
+                                        <h3>Investing 101</h3>
+                                        <p>
+                                            Start investing with as little as $10. Learn about index funds,
+                                            compound interest, and building long-term wealth.
+                                        </p>
+                                    </section>
 
-								</div>
-								<div class="col-3 col-6-medium col-12-small">
+                                </div>
+                                <div class="col-3 col-6-medium col-12-small">
 
-									<!-- Service -->
-									<section class="box feature">
-										<img src="images/career_prep.jpg" alt="books" class="image featured"/>
-										<h3>Career Prep</h3>
-										<p>
-											Learn the fundamentals of workplace benefits like 401(k)s and IRAs to make
-											informed decisions when you start your career.
-										</p>
-									</section>
+                                    <!-- Service -->
+                                    <section class="box feature">
+                                        <img src="images/career_prep.jpg" alt="books" class="image featured"/>
+                                        <h3>Career Prep</h3>
+                                        <p>
+                                            Learn the fundamentals of workplace benefits like 401(k)s and IRAs to make
+                                            informed decisions when you start your career.
+                                        </p>
+                                    </section>
 
-								</div>
-								<div class="col-12">
-									<ul class="actions">
-										<li><a href="#contact" class="button large">Book Your Free Consultation</a></li>
-										<li><a href="#process" class="button alt large">See How It Works</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</section>
+                                </div>
+                                <div class="col-12">
+                                    <ul class="actions">
+                                        <li><a href="#contact" class="button large">Book Your Free Consultation</a></li>
+                                        <li><a href="#process" class="button alt large">See How It Works</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
-				</div>
-				<div class="col-12">
-					<section class="box features" id="resources">
-						<h2 class="major"><span>Free Resources to Get Started</span></h2>
-						<div>
-							<div class="row">
-								<div class="col-4 col-12-medium">
-									<section class="box">
-										<h3>Budget Templates</h3>
-										<p>Simple spreadsheets designed for college students. Track expenses, manage
-											your money, and still have fun.</p>
-										<a href="#contact" class="button alt">Get Templates</a>
-									</section>
-								</div>
-								<div class="col-4 col-12-medium">
-									<section class="box">
-										<h3>Recommended Tools</h3>
-										<p>My favorite (mostly free) apps and resources for managing money in
-											college.</p>
-										<ul style="text-align: left;">
-											<li>Mint (free budgeting)</li>
-											<li>YNAB (free for students!)</li>
-											<li>Credit Karma</li>
-											<li>Fidelity Youth Account</li>
-										</ul>
-									</section>
-								</div>
-							</div>
-						</div>
-					</section>
-				</div>
-				<div class="col-12">
+                </div>
+                <div class="col-12">
+                    <section class="box features" id="resources">
+                        <h2 class="major"><span>Free Resources to Get Started</span></h2>
+                        <div>
+                            <div class="row">
+                                <div class="col-4 col-12-medium">
+                                    <section class="box">
+                                        <h3>Budget Templates</h3>
+                                        <p>Simple spreadsheets designed for college students. Track expenses, manage
+                                            your money, and still have fun.</p>
+                                        <a href="#contact" class="button alt">Get Templates</a>
+                                    </section>
+                                </div>
+                                <div class="col-4 col-12-medium">
+                                    <section class="box">
+                                        <h3>Recommended Tools</h3>
+                                        <p>My favorite (mostly free) apps and resources for managing money in
+                                            college.</p>
+                                        <ul style="text-align: left;">
+                                            <li>Mint (free budgeting)</li>
+                                            <li>YNAB (free for students!)</li>
+                                            <li>Credit Karma</li>
+                                            <li>Fidelity Youth Account</li>
+                                        </ul>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-12">
 
-					<!-- Process -->
-					<section class="box blog" id="process">
-						<h2 class="major"><span>Your Path to Financial Confidence</span></h2>
-						<div>
-							<div class="row">
-								<div class="col-9 col-12-medium">
-									<div class="content">
+                    <!-- Process -->
+                    <section class="box blog" id="process">
+                        <h2 class="major"><span>Your Path to Financial Confidence</span></h2>
+                        <div>
+                            <div class="row">
+                                <div class="col-9 col-12-medium">
+                                    <div class="content">
 
-										<!-- Featured Post -->
-										<article class="box post">
-											<header>
-												<h3>A Personalized Approach That Works</h3>
-												<p>No judgement, no jargon - just real financial education</p>
-											</header>
-											<a href="#" class="image featured"><img src="images/financial_education.jpg"
-																					alt=""/></a>
-											<p>
-												I believe financial education should be accessible and relatable. That's
-												why every
-												relationship starts with a <strong>free 30-minute educational
-												session</strong>
-												where we discuss what financial topics you want to learn about and
-												create a personalized learning plan - no strings attached.
-											</p>
-											<p>
-												All sessions are conducted via Zoom, making it easy to fit into your
-												busy schedule between
-												classes and activities. Whether you're at a large state school, small
-												liberal arts college,
-												or anywhere in between, we'll create strategies that work for your
-												specific situation.
-											</p>
-											<a href="#" class="button">Start Your Free Consultation</a>
-										</article>
+                                        <!-- Featured Post -->
+                                        <article class="box post">
+                                            <header>
+                                                <h3>A Personalized Approach That Works</h3>
+                                                <p>No judgement, no jargon - just real financial education</p>
+                                            </header>
+                                            <a href="#" class="image featured"><img src="images/financial_education.jpg"
+                                                                                    alt=""/></a>
+                                            <p>
+                                                I believe financial education should be accessible and relatable. That's
+                                                why every
+                                                relationship starts with a <strong>free 30-minute educational
+                                                session</strong>
+                                                where we discuss what financial topics you want to learn about and
+                                                create a personalized learning plan - no strings attached.
+                                            </p>
+                                            <p>
+                                                All sessions are conducted via Zoom, making it easy to fit into your
+                                                busy schedule between
+                                                classes and activities. Whether you're at a large state school, small
+                                                liberal arts college,
+                                                or anywhere in between, we'll create strategies that work for your
+                                                specific situation.
+                                            </p>
+                                            <a href="#" class="button">Start Your Free Consultation</a>
+                                        </article>
 
-									</div>
-								</div>
-								<div class="col-3 col-12-medium">
-									<div class="sidebar">
+                                    </div>
+                                </div>
+                                <div class="col-3 col-12-medium">
+                                    <div class="sidebar">
 
-										<!-- Session Steps -->
-										<ul class="divided">
-											<li>
-												<article class="box post-summary">
-													<h3>1. Free Consultation</h3>
-													<p>30-minute call to understand your needs and goals</p>
-												</article>
-											</li>
-											<li>
-												<article class="box post-summary">
-													<h3>2. Financial Snapshot</h3>
-													<p>Review your current situation without judgement</p>
-												</article>
-											</li>
-											<li>
-												<article class="box post-summary">
-													<h3>3. Custom Action Plan</h3>
-													<p>Develop practical strategies that fit your life</p>
-												</article>
-											</li>
-											<li>
-												<article class="box post-summary">
-													<h3>4. Regular Check-ins</h3>
-													<p>Stay on track with a monthly progress review</p>
-												</article>
-											</li>
-											<li>
-												<article class="box post-summary">
-													<h3>5. Ongoing Support</h3>
-													<p>Get help whenever you need it via email</p>
-												</article>
-											</li>
-										</ul>
-										</li>
-										</ul>
-										<a href="#contact" class="button alt">Book Consultation</a>
+                                        <!-- Session Steps -->
+                                        <ul class="divided">
+                                            <li>
+                                                <article class="box post-summary">
+                                                    <h3>1. Free Consultation</h3>
+                                                    <p>30-minute call to understand your needs and goals</p>
+                                                </article>
+                                            </li>
+                                            <li>
+                                                <article class="box post-summary">
+                                                    <h3>2. Financial Snapshot</h3>
+                                                    <p>Review your current situation without judgement</p>
+                                                </article>
+                                            </li>
+                                            <li>
+                                                <article class="box post-summary">
+                                                    <h3>3. Custom Action Plan</h3>
+                                                    <p>Develop practical strategies that fit your life</p>
+                                                </article>
+                                            </li>
+                                            <li>
+                                                <article class="box post-summary">
+                                                    <h3>4. Regular Check-ins</h3>
+                                                    <p>Stay on track with a monthly progress review</p>
+                                                </article>
+                                            </li>
+                                            <li>
+                                                <article class="box post-summary">
+                                                    <h3>5. Ongoing Support</h3>
+                                                    <p>Get help whenever you need it via email</p>
+                                                </article>
+                                            </li>
+                                        </ul>
+                                        </li>
+                                        </ul>
+                                        <a href="#contact" class="button alt">Book Consultation</a>
 
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
-				</div>
-			</div>
-		</div>
-	</section>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<section class="wrapper style3">
-		<div class="container" id="contact">
-			<header class="major" style="padding-top: 2em;">
-				<h2>Ready to Take Control of Your Finances?</h2>
-				<p>Start with a free 30-minute educational consultation</p>
-			</header>
-			<form method="post" action="https://formspree.io/f/mrblporj">
-				<div class="row gtr-uniform">
-					<div class="col-6 col-12-xsmall">
-						<input type="text" name="name" placeholder="Name" required/>
-					</div>
-					<div class="col-6 col-12-xsmall">
-						<input type="email" name="email" placeholder="Email" required/>
-					</div>
-					<div class="col-6 col-12-xsmall">
-						<input type="text" name="school" placeholder="School/University"/>
-					</div>
-					<div class="col-6 col-12-xsmall">
-						<select name="year">
-							<option value="">- Year in School -</option>
-							<option value="freshman">Freshman</option>
-							<option value="sophomore">Sophomore</option>
-							<option value="junior">Junior</option>
-							<option value="senior">Senior</option>
-						</select>
-					</div>
-					<div class="col-12">
-						<textarea name="message" placeholder="What financial topics interest you?" rows="4"></textarea>
-					</div>
-					<div class="col-12">
-						<ul class="actions special">
-							<li><input type="submit" value="Request Free Session" class="primary"/></li>
-						</ul>
-					</div>
-				</div>
-			</form>
-		</div>
-	</section>
-	<!-- Footer -->
-	<footer id="footer">
-		<div class="container">
-			<div class="row gtr-200">
-				<div class="col-12">
+    <section class="wrapper style3">
+        <div class="container" id="contact">
+            <header class="major" style="padding-top: 2em;">
+                <h2>Ready to Take Control of Your Finances?</h2>
+                <p>Start with a free 30-minute educational consultation</p>
+            </header>
+            <form method="post" action="https://formspree.io/f/mrblporj">
+                <div class="row gtr-uniform">
+                    <div class="col-6 col-12-xsmall">
+                        <input type="text" name="name" placeholder="Name" required/>
+                    </div>
+                    <div class="col-6 col-12-xsmall">
+                        <input type="email" name="email" placeholder="Email" required/>
+                    </div>
+                    <div class="col-6 col-12-xsmall">
+                        <input type="text" name="school" placeholder="School/University"/>
+                    </div>
+                    <div class="col-6 col-12-xsmall">
+                        <select name="year">
+                            <option value="">- Year in School -</option>
+                            <option value="freshman">Freshman</option>
+                            <option value="sophomore">Sophomore</option>
+                            <option value="junior">Junior</option>
+                            <option value="senior">Senior</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <textarea name="message" placeholder="What financial topics interest you?" rows="4"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <ul class="actions special">
+                            <li><input type="submit" value="Request Free Session" class="primary"/></li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row gtr-200">
+                <div class="col-12">
 
-					<!-- About -->
-					<section>
-						<h2 class="major"><span>Why Summit Core Financial?</span></h2>
-						<p>
-							As a fellow undergrad, I've been overwhelmed in the past. It was difficult to start my
-							journey
-							to understanding the fundamentals of personal finance especially in this day and age where
-							there's
-							so much garbage at the tip of our fingerprints: YouTubers guaranteeing short term growth
-							through
-							memecoins, an ever increasing amount of online courses, or brokerages that lets you put your
-							savings
-							into guessing the winner of a hotdog eating contest.
-						</p>
-						<p>
-							I am here to simplify the essentials of personal finance for undergrads before a
-							commission-based
-							financial advisor promotes a fund that gives a kickback that also underperforms the market.
-							I believe
-							that a 30 minute consultation ALONE can set any amount of students up to understand what the
-							immediate steps to be taken are. Through Summit Core Financial, we can guarantee a dramatic
-							increase
-							in being weary and calculated in a world of confusion.
+                    <!-- About -->
+                    <section>
+                        <h2 class="major"><span>Why Summit Core Financial?</span></h2>
+                        <p>
+                            As a fellow undergrad, I've been overwhelmed in the past. It was difficult to start my
+                            journey
+                            to understanding the fundamentals of personal finance especially in this day and age where
+                            there's
+                            so much garbage at the tip of our fingerprints: YouTubers guaranteeing short term growth
+                            through
+                            memecoins, an ever increasing amount of online courses, or brokerages that lets you put your
+                            savings
+                            into guessing the winner of a hotdog eating contest.
+                        </p>
+                        <p>
+                            I am here to simplify the essentials of personal finance for undergrads before a
+                            commission-based
+                            financial advisor promotes a fund that gives a kickback that also underperforms the market.
+                            I believe
+                            that a 30 minute consultation ALONE can set any amount of students up to understand what the
+                            immediate steps to be taken are. Through Summit Core Financial, we can guarantee a dramatic
+                            increase
+                            in being weary and calculated in a world of confusion.
 
-						</p>
-					</section>
+                        </p>
+                    </section>
 
-					<section>
-						<h2 class="major" style="color: #d90429"><span>Important Disclosure</span></h2>
-						<div class="disclaimer-box">
-							<p><strong>Educational Service Only:</strong> Summit Core Financial provides financial
-								education and peer mentoring services. Yoon Milling is not a licensed financial advisor,
-								CPA, or attorney. This service does not provide individual stock recommendations, legal
-								advice, or insurance sales or recommendations.</p>
-							<p>All information is for educational purposes only. For specific financial decisions,
-								please consult with qualified, licensed professionals.</p>
-						</div>
-				</div>
-				</section>
-			</div>
-			<div class="col-12">
+                    <section>
+                        <h2 class="major" style="color: #d90429"><span>Important Disclosure</span></h2>
+                        <div class="disclaimer-box">
+                            <p><strong>Educational Service Only:</strong> Summit Core Financial provides financial
+                                education and peer mentoring services. Yoon Milling is not a licensed financial advisor,
+                                CPA, or attorney. This service does not provide individual stock recommendations, legal
+                                advice, or insurance sales or recommendations.</p>
+                            <p>All information is for educational purposes only. For specific financial decisions,
+                                please consult with qualified, licensed professionals.</p>
+                        </div>
+                </div>
+                </section>
+            </div>
+            <div class="col-12">
 
-				<section>
-					<h2 class="major"><span>Get in touch!</span></h2>
-					<p>Ready to take control of your financial future? Reach out for a free consultation!</p>
+                <section>
+                    <h2 class="major"><span>Get in touch!</span></h2>
+                    <p>Ready to take control of your financial future? Reach out for a free consultation!</p>
 
-					<ul class="contact">
-						<li><a class="icon solid fa-envelope" href="mailto:contact@summitcorefinancial.com"><span
-								class="label">Email</span></a></li>
-						<li><a class="icon brands fa-linkedin-in"
-							   href="https://www.linkedin.com/in/yoonmilling/"><span
-								class="label">LinkedIn</span></a></li>
-					</ul>
-				</section>
+                    <ul class="contact">
+                        <li><a class="icon solid fa-envelope" href="mailto:contact@summitcorefinancial.com"><span
+                                class="label">Email</span></a></li>
+                        <li><a class="icon brands fa-linkedin-in"
+                               href="https://www.linkedin.com/in/yoonmilling/"><span
+                                class="label">LinkedIn</span></a></li>
+                    </ul>
+                </section>
 
-			</div>
-		</div>
+            </div>
+        </div>
 
-		<!-- Copyright -->
-		<div id="copyright">
-			<ul class="menu">
-				<li>&copy; Summit Core Financial LLC. All rights reserved</li>
-				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</div>
+        <!-- Copyright -->
+        <div id="copyright">
+            <ul class="menu">
+                <li>&copy; Summit Core Financial LLC. All rights reserved</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
 
 </div>
 </footer>
@@ -534,45 +546,46 @@
 
 <script>
     if (window.innerWidth <= 736) {
-            document.write('<a id="logo" style="display:none">SCF</a>');
+        document.write('<a id="logo" style="display:none">SCF</a>');
+
     }
 </script>
 
 <script src="assets/js/main.js"></script>
 
 <script>
-	$(document).ready(function () {
-		// Get all sections with an ID
-		var sections = $('section[id]');
-		var nav = $('#nav');
-		var nav_height = nav.outerHeight();
+    $(document).ready(function () {
+        // Get all sections with an ID
+        var sections = $('section[id]');
+        var nav = $('#nav');
+        var nav_height = nav.outerHeight();
 
-		$(window).on('scroll', function () {
-			var cur_pos = $(this).scrollTop();
+        $(window).on('scroll', function () {
+            var cur_pos = $(this).scrollTop();
 
-			sections.each(function () {
-				var top = $(this).offset().top - nav_height - 100;
-				var bottom = top + $(this).outerHeight();
+            sections.each(function () {
+                var top = $(this).offset().top - nav_height - 100;
+                var bottom = top + $(this).outerHeight();
 
-				if (cur_pos >= top && cur_pos <= bottom) {
-					nav.find('li').removeClass('current');
-					nav.find('a[href="#' + $(this).attr('id') + '"]').parent('li').addClass('current');
-				}
-			});
+                if (cur_pos >= top && cur_pos <= bottom) {
+                    nav.find('li').removeClass('current');
+                    nav.find('a[href="#' + $(this).attr('id') + '"]').parent('li').addClass('current');
+                }
+            });
 
-			// Handle home section
-			if (cur_pos < 300) {
-				nav.find('li').removeClass('current');
-				nav.find('a[href="#home"]').parent('li').addClass('current');
-			}
-		});
+            // Handle home section
+            if (cur_pos < 300) {
+                nav.find('li').removeClass('current');
+                nav.find('a[href="#home"]').parent('li').addClass('current');
+            }
+        });
 
-		// Handle click events
-		nav.find('a').on('click', function () {
-			nav.find('li').removeClass('current');
-			$(this).parent('li').addClass('current');
-		});
-	});
+        // Handle click events
+        nav.find('a').on('click', function () {
+            nav.find('li').removeClass('current');
+            $(this).parent('li').addClass('current');
+        });
+    });
 </script>
 
 
