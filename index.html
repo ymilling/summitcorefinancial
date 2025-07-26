@@ -534,9 +534,7 @@
 
 <script>
     if (window.innerWidth <= 736) {
-        $(document).ready(function() {
-            $('<a id="logo" style="display:none">SCF</a>').appendTo('body');
-        });
+            document.write('<a id="logo" style="display:none">SCF</a>');
     }
 </script>
 
@@ -576,11 +574,7 @@
 		});
 	});
 </script>
-<script>
-	if (window.innerWidth <= 736) {
-        document.write('<a id="logo" style="display:none">SCF</a>');
-    }
-</script>
+
 
 </body>
 </html>
