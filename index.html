@@ -34,60 +34,60 @@
     <style>
         /* Mobile fixes */
         @media screen and (max-width: 736px) {
-        /* Target every possible header element with maximum specificity */
-        body #header,
-        body header#header,
-        body #page-wrapper #header,
-        body div#header,
-        body .homepage #header,
-        #header.logo,
-        #header .logo,
-        #header .logo div,
-        #header .logo h1,
-        #header .logo p,
-        #header .logo span,
-        #header .logo a,
-        #header .logo * {
-            display: none !important;
-            visibility: hidden !important;
-            height: 0 !important;
-            width: 0 !important;
-            overflow: hidden !important;
-            position: absolute !important;
-            left: -9999px !important;
-            opacity: 0 !important;
-            pointer-events: none !important;
-        }
+            /* Target every possible header element with maximum specificity */
+            body #header,
+            body header#header,
+            body #page-wrapper #header,
+            body div#header,
+            body .homepage #header,
+            #header.logo,
+            #header .logo,
+            #header .logo div,
+            #header .logo h1,
+            #header .logo p,
+            #header .logo span,
+            #header .logo a,
+            #header .logo * {
+                display: none !important;
+                visibility: hidden !important;
+                height: 0 !important;
+                width: 0 !important;
+                overflow: hidden !important;
+                position: absolute !important;
+                left: -9999px !important;
+                opacity: 0 !important;
+                pointer-events: none !important;
+            }
 
-        /* Also hide the container */
-        .logo.container {
-            display: none !important;
-        }
+            /* Also hide the container */
+            .logo.container {
+                display: none !important;
+            }
 
-        /* Adjust nav to be at the top */
-        #nav {
-            position: static !important;
-            top: 0 !important;
-            background: #fff;
-            box-shadow: 0 0 0.5em 0 rgba(0, 0, 0, 0.1);
-            margin-top: 0;
-        }
+            /* Adjust nav to be at the top */
+            #nav {
+                position: static !important;
+                top: 0 !important;
+                background: #fff;
+                box-shadow: 0 0 0.5em 0 rgba(0, 0, 0, 0.1);
+                margin-top: 0;
+            }
 
-        /* Fix banner spacing */
-        #banner {
-            margin-top: 0;
-            min-height: 40vh;
-            padding: 2em 1em;
-        }
+            /* Fix banner spacing */
+            #banner {
+                margin-top: 0;
+                min-height: 40vh;
+                padding: 2em 1em;
+            }
 
-        #banner .content {
-            padding: 1.5em;
-        }
+            #banner .content {
+                padding: 1.5em;
+            }
 
-        #banner h2 {
-            font-size: 1.5em;
+            #banner h2 {
+                font-size: 1.5em;
+            }
         }
-    }
     </style>
 
     <link rel="stylesheet" href="assets/css/main.css"/>
@@ -558,21 +558,16 @@
         });
     });
 </script>
-
 <script>
-$(document).ready(function () {
-    if (window.innerWidth <= 736) {
-        // Force inject CSS that will definitely override everything
-        $('<style>')
-            .prop('type', 'text/css')
-            .html('@media screen and (max-width: 736px) { header, #header { display: none !important; } }')
-            .appendTo('head');
-
-        // Also remove it via JavaScript
-        $('#header').remove();
-        $('header').remove();
-    }
-});
+    $(document).ready(function () {
+        if (window.innerWidth <= 736) {
+            // Wait for main.js to create the titleBar
+            setTimeout(function () {
+                // Remove the title span that contains the logo HTML
+                $('#titleBar .title').remove();
+            }, 100);
+        }
+    });
 </script>
 
 </body>
