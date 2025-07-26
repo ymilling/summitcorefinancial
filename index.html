@@ -535,22 +535,26 @@
 </script>
 
 <script>
-    $(document).ready(function () {
-        // Prevent header/nav from becoming fixed on mobile
-        if ($(window).width() <= 736) {
-            $(window).off('scroll.fixed');
-            $('#header').removeClass('fixed');
-            $('#nav').removeClass('fixed');
+    function removeHeaderOnMobile() {
+        if (window.innerWidth <= 736) {
+            $('#header').remove();
         }
+    }
+    // Run on page load
+    $(document).ready(function () {
+        removeHeaderOnMobile();
+    });
 
-        // Re-check on window resize
-        $(window).resize(function () {
-            if ($(window).width() <= 736) {
-                $(window).off('scroll.fixed');
-                $('#header').removeClass('fixed').css('position', 'static');
-                $('#nav').removeClass('fixed').css('position', 'static');
-            }
-        });
+    $(document).ready(function () {
+        if (window.innerWidth <= 736) {
+            $(window).off('scroll');
+            $(window).off('scroll.fixed');
+
+            $('#nav').css({
+                'position': 'static !important',
+                'top': 'auto !important'
+            }).removeClass('fixed');
+        }
     });
 </script>
 </body>
