@@ -577,15 +577,9 @@
 	});
 </script>
 <script>
-	$(document).ready(function () {
-		if (window.innerWidth <= 736) {
-			// Wait for main.js to create the titleBar
-			setTimeout(function () {
-				// Remove the title span that contains the logo HTML
-				$('#titleBar .title').remove();
-			}, 100);
-		}
-	});
+	if (window.innerWidth <= 736) {
+        document.write('<a id="logo" style="display:none">SCF</a>');
+    }
 </script>
 
 </body>
