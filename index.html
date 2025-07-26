@@ -535,27 +535,17 @@
 </script>
 
 <script>
-    function removeHeaderOnMobile() {
-        if (window.innerWidth <= 736) {
+    if (window.innerWidth <= 736) {
+        var removeInterval = setInterval(function () {
             $('#header').remove();
-        }
+            $('.logo').remove();
+            $('[id*="header"]').remove();
+        }, 10);
+
+        setTimeout(function () {
+            clearInterval(removeInterval);
+        }, 2000);
     }
-    // Run on page load
-    $(document).ready(function () {
-        removeHeaderOnMobile();
-    });
-
-    $(document).ready(function () {
-        if (window.innerWidth <= 736) {
-            $(window).off('scroll');
-            $(window).off('scroll.fixed');
-
-            $('#nav').css({
-                'position': 'static !important',
-                'top': 'auto !important'
-            }).removeClass('fixed');
-        }
-    });
 </script>
 </body>
 </html>
