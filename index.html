@@ -560,18 +560,20 @@
 </script>
 
 <script>
-    $(document).ready(function () {
-        if (window.innerWidth <= 736) {
-            $('#header').hide();
+$(document).ready(function () {
+    if (window.innerWidth <= 736) {
+        // Force inject CSS that will definitely override everything
+        $('<style>')
+            .prop('type', 'text/css')
+            .html('@media screen and (max-width: 736px) { header, #header { display: none !important; } }')
+            .appendTo('head');
 
-            // Add company name next to hamburger menu
-            setTimeout(function () {
-                if ($('#titleBar .title').length === 0) {
-                    $('#titleBar').append('<span class="title" style="position: absolute; left: 60px; top: 50%; transform: translateY(-50%); color: #1e3a5f; font-weight: bold; font-size: 1.2em;">Summit Core Financial</span>');
-                }
-            }, 100);
-        }
-    });
+        // Also remove it via JavaScript
+        $('#header').remove();
+        $('header').remove();
+    }
+});
 </script>
+
 </body>
 </html>
