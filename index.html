@@ -34,54 +34,53 @@
     <style>
         /* Mobile fixes */
         @media screen and (max-width: 736px) {
-            /* Target every possible header element with maximum specificity */
-            body #header,
-            body header#header,
-            body #page-wrapper #header,
-            body div#header,
-            body .homepage #header,
-            #header.logo,
-            #header .logo,
-            #header .logo div,
-            #header .logo h1,
-            #header .logo p,
-            #header .logo span,
-            #header .logo a,
-            #header .logo * {
-                display: none !important;
-                visibility: hidden !important;
-                height: 0 !important;
-                width: 0 !important;
-                overflow: hidden !important;
-                position: absolute !important;
-                left: -9999px !important;
-                opacity: 0 !important;
-                pointer-events: none !important;
-            }
-
+            #header,
+            #header-content,
             .logo.container {
                 display: none !important;
             }
 
             #titleBar {
                 background: linear-gradient(135deg, #1e3a5f 0%, #2b5876 100%) !important;
+                height: 44px;
+                line-height: 44px;
+                box-shadow: 0 0.125em 0.125em 0 rgba(0, 0, 0, 0.125);
             }
 
-            #titleBar .toggle:before {
-                background: #fff !important;
-                box-shadow: 0 0.5rem 0 0 #fff, 0 1rem 0 0 #fff !important;
-            }
-
-            /* Ensure the toggle button itself stays normal size */
             #titleBar .toggle {
-                color: #fff !important;
+                background: transparent !important;
+                border: none !important;
+                box-shadow: none !important;
+                width: 44px;
+                height: 44px;
+                position: absolute;
+                left: 0;
+                top: 0;
             }
 
-            #titleBar .title,
-            #titleBar .title a {
-                color: #fff !important;
+            /* Style the hamburger lines */
+            #titleBar .toggle:before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 15px;
+                top: 11px;
+                width: 20px;
+                height: 2px;
+                background: #fff !important;
+                box-shadow: 0 8px 0 0 #fff, 0 16px 0 0 #fff !important;
             }
 
+            /* Center the SCF title */
+            #titleBar .title {
+                color: #fff !important;
+                display: block;
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.1em;
+            }
+
+            /* Fix nav positioning */
             #nav {
                 position: static !important;
                 top: 0 !important;
