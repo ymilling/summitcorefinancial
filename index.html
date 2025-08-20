@@ -106,6 +106,21 @@
         }
 
         @media screen and (max-width: 980px) {
+            #header,
+            #header-content,
+            #header .logo,
+            #header h1,
+            #header p,
+            #header span,
+            #header svg,
+            .logo.container,
+            header#header {
+                display: none !important;
+                visibility: hidden !important;
+                height: 0 !important;
+                overflow: hidden !important;
+            }
+
             #titleBar .toggle:before {
                 background: transparent !important;
                 content: '›' !important;
@@ -115,6 +130,18 @@
                 border: none !important;
                 box-shadow: none !important;
             }
+
+            #titleBar .toggle {
+                background: transparent !important;
+                border: none !important;
+                box-shadow: none !important;
+                text-decoration: none !important;
+            }
+
+            #titleBar .toggle:after {
+                display: none !important;
+            }
+
         }
     </style>
 
@@ -561,9 +588,8 @@
 <script src="assets/js/util.js"></script>
 
 <script>
-    if (window.innerWidth <= 736) {
-        document.write('<a id="logo" style="display:none">SCF</a>');
-
+    if (window.innerWidth < 980) {
+        document.write('<div id="logo" style="display:none">SCF</div>');
     }
 </script>
 
